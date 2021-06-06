@@ -1,5 +1,3 @@
-# docker_app_gitpod
-
 #  UBUNTU  
 FROM ubuntu:20.04    
 LABEL description = "Imagen - Desarrollo Web"  
@@ -11,7 +9,7 @@ RUN apt update
 RUN apt install -y python3  
 RUN apt install -y python3-pip    
 
-# WEB.PY  
+#  WEB.PY  
 RUN pip3 install web.py
 
 #  USED TO OMIT UBICATION 
@@ -33,4 +31,4 @@ RUN apt-get -y install sqlite3 libsqlite3-dev
 
 EXPOSE 8080/tcp
 
-# php -S 0.0.0.0:8080 -t . index.php ---> app.py en su caso
+# DESPUES DE VERIFICAR QUE EXISTA LA IMAGEN CORREMOS ESTO EN CONSOLA: docker run -it -p 8080:8080 -v /workspace/gitpod_docker_webapp/volume:/volume --name [NAME-CONTENEDOR] -h [NAME-CONTENEDOR]  [NAME IMAGE - SIN []]
